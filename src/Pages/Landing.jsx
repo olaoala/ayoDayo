@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
   const [greetingIndex, setGreetingIndex] = useState(0); // Track the current greeting index
-  const greetings = ['Hey', 'Do you know what love feels like??', 'Come let me show you!'];
+  const greetings = useMemo(() => ['Hello', 'Welcome', 'Glad to have you here'], []);
   const navigate = useNavigate();
 
   const navigateToHome = useCallback(() => {

@@ -8,7 +8,6 @@ import LoveStoryPage from './OurStory';
 import RegistryPage from './Registry';
 import UploadPage from './Upload';
 import Footer from '../Components/footer';
-import InfinityAnimation from '../Components/Infinity';
 
 
 const HomePage = () => {

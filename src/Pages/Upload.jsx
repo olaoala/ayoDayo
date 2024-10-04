@@ -35,10 +35,13 @@ const UploadPage = () => {
           'Content-Type': 'multipart/form-data',
         },
       });
+      console.log(response);
+
 
       setMessage('Pictures uploaded successfully!');
     } catch (error) {
       setMessage('Error uploading pictures. Please try again.');
+
     }
   };
 
