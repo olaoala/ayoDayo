@@ -5,11 +5,9 @@ const stream = require('stream');
 const path = require('path');
 const cors = require('cors');
 
-
 const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(cors({ origin: 'http://localhost:3000' }));
-
 
 // Multer setup to handle image uploads
 const storage = multer.memoryStorage();
@@ -34,7 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // API to handle image uploads
-app.post('/upload', upload.array('photos', 3), async (req, res) => {
+app.post('/home', upload.array('photos', 3), async (req, res) => {
   try {
     const files = req.files;
     if (!files) return res.status(400).send('No files uploaded.');
@@ -47,29 +45,37 @@ app.post('/upload', upload.array('photos', 3), async (req, res) => {
       const bufferStream = new stream.PassThrough();
       bufferStream.end(buffer);
 
-      // Upload the file to Google Drive
-      const response = await drive.files.create({
-        requestBody: {
-          name: originalname,   // Name of the uploaded file
-          parents: ['<FOLDER_ID>'],  // Use the actual folder ID from your Drive
-        },
-        media: {
-          mimeType: mimetype,
-          body: bufferStream,
-        },
-        fields: 'id',
-      });
+      try {
+        // Upload the file to Google Drive
+        const response = await drive.files.create({
+          requestBody: {
+            name: originalname,   // Name of the uploaded file
+            parents: ['1Dpzy9uzmOK1gfb7o2RObruSob1aHgo8F'],  // Use the actual folder ID from your Drive
+          },
+          media: {
+            mimeType: mimetype,
+            body: bufferStream,
+          },
+          fields: 'id',
+        });
 
-      console.log(`Uploaded file with ID: ${response.data.id}`);
+        console.log(`Uploaded file with ID: ${response.data.id}`);
+      } catch (uploadError) {
+        // Error during file upload
+        console.error('Error uploading to Google Drive:', uploadError.message);
+        return res.status(500).send(`Error uploading ${file.originalname}`);
+      }
     }
 
     res.status(200).send('Files uploaded successfully.');
   } catch (error) {
-    console.error('Error uploading files:', error.response ? error.response.data : error.message);
+    // General error handling
+    console.error('Error uploading files:', error.message);
     res.status(500).send('Error uploading files.');
   }
 });
 
+// Start the Express server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

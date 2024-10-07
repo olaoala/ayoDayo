@@ -30,14 +30,12 @@ const UploadPage = () => {
     });
 
     try {
-      const response = await axios.post('http://localhost:5000/upload', formData, {
+      const response = await axios.post('http://localhost:5000/home', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
       console.log(response);
-
-
       setMessage('Pictures uploaded successfully!');
     } catch (error) {
       setMessage('Error uploading pictures. Please try again.');
@@ -47,7 +45,7 @@ const UploadPage = () => {
 
   return (
     <div>
-      <div className="flex flex-col items-center justify-center h-72 bg-gray-50 p-6">
+      <div className="flex flex-col items-center justify-center h-72 md:h-32 bg-gray-50 p-6">
         <h2 className="text-2xl font-bold mb-4 text-center">Upload Your Wedding Pictures</h2>
 
         <form onSubmit={handleSubmit} className="flex flex-col items-center">
