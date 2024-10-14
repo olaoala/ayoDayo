@@ -19,16 +19,16 @@ const EventsPage = () => {
             allowFullScreen=""
             loading="lazy"
           ></iframe>
-          <div className="mt-4 flex justify-between items-start">
+          <div className="mt-4">
             <div>
-            <p className="text-sm mb-1">Venue: New Covenant <br /> Church, Ijokodo</p>
+            <p className="text-sm mb-1">Venue: New Covenant <br />Church, Ijokodo</p>
             <p className="text-sm mb-1">Date: 24th October, 2024</p>
             <p className="text-sm mb-1">Time: 4:00 PM</p>
             </div>
           
             <a
               href="https://www.google.com/maps/dir/?api=1&destination=7.428639,3.869056"
-              className="inline-block mt-28 ml-4 px-4 py-2 bg-rose-gold text-white rounded-lg hover:bg-chocolate transition"
+              className="inline-block mt-3  px-4 py-2 border border-rose-dark-tint text-rose-dark-tint rounded-lg hover:bg-chocolate transition"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -47,16 +47,16 @@ const EventsPage = () => {
             allowFullScreen=""
             loading="lazy"
           ></iframe>
-          <div className="mt-4 flex justify-between items-start">
+          <div className="mt-4">
             <div className=' font-nunito font-bold'>
-              <p className="text-sm mb-1">Venue: Manhattan Hall,  <br /> Eleyele Road, Ibadan</p>
+              <p className="text-sm mb-1">Venue: Manhattan Hall, <br />Eleyele Road, Ibadan</p>
               <p className="text-sm mb-1">Date: 26th  October,<br />  2024</p>
               <p className="text-sm mb-1">Time: 12:00 PM</p>
             </div>
 
             <a
               href="https://www.google.com/maps/dir/?api=1&destination=7.402074,3.856942"
-              className="inline-block mt-28 ml-4 px-4 py-2 bg-rose-gold text-white rounded-lg hover:bg-chocolate transition"
+              className="inline-block mt-3 px-4 py-2 border border-rose-dark-tint text-rose-dark-tint rounded-lg hover:bg-chocolate transition"
               target="_blank"
               rel="noopener noreferrer"
             >

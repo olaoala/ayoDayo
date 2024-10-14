@@ -58,7 +58,7 @@ const RegistryPage = () => {
         {/* Send Funds Button */}
         <button
           onClick={openModal}
-          className="px-6 py-3 bg-rose-gold text-white rounded-lg hover:bg-chocolate transition"
+          className="px-6 py-3  border bg-rose-dark-tint  text-white rounded-lg hover:bg-chocolate transition"
         >
           Send Funds
         </button>
@@ -66,7 +66,7 @@ const RegistryPage = () => {
         {/* Clear Wishlist Button */}
         <button
           onClick={() => window.location.href = 'https://www.amazon.com/wedding/registry-example'} // Replace with the actual Amazon wishlist link
-          className="px-6 py-3 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition"
+          className="px-6 py-3 border border-rose-dark-tint text-rose-dark-tint rounded-lg hover:bg-gray-400 transition"
         >
           Clear Wishlist
         </button>

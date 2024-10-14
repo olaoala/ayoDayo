@@ -39,7 +39,7 @@ const OurLoveStory = () => {
     <div className="w-full mx-auto p-5 text-rose-dark-tint ">
       <p className='text-center font-cardo text-xl  font-bold underline underline-offset-1 m-2'>Our Love Story</p>
 
-      <div className='flex justify-between font-cardo font-bold m-5 '>
+      <div className='flex justify-between font-cardo font-bold m-3 '>
         <p>Ayo's POV</p>
         <p>Dayo's POV</p>
 

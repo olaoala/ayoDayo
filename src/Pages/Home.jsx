@@ -25,7 +25,7 @@ const HomePage = () => {
       <div className="relative h-screen bg-cover bg-center text-rose-gold" style={{ backgroundImage: `url(${I1})` }}>
 
         <div className="absolute inset-0 bg-black opacity-60"></div>
-        <div className="relative flex flex-col items-center justify-end bottom-14 h-full text-rose-gold">
+        <div className="relative flex flex-col items-center justify-end bottom-9 h-full text-rose-gold">
           <img className='h-40' src={mainimg} alt="" />
           <div className='flex font-bold gap-5  p-5 font-pinyon text-center text-2xl lg:text-4xl '>
           <p className='text-center text-xl lg:text-4xl '>Oluwafiayobunmi <br /> Fiponmile</p>
