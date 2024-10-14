@@ -36,7 +36,7 @@ const UploadPage = () => {
       console.log(response);
       setMessage('Pictures uploaded successfully!');
     } catch (error) {
-      setMessage('Error uploading pictures. Please try again.');
+      setMessage('Error uploading pictures. Please try again.',error);
     }
   };
 
