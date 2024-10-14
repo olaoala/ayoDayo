@@ -7,8 +7,17 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: 'http://localhost:3000' }));
+const allowedOrigins = ['http://localhost:3000', 'https://ayodayo.netlify.app'];
 
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+}));
 const storage = multer.memoryStorage();
 const upload = multer({ storage, limits: { fileSize: 5 * 1024 * 1024 } });
 
