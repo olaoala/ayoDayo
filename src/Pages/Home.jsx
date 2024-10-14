@@ -40,9 +40,11 @@ const HomePage = () => {
     <LoveStoryPage/>
 
     <EventsPage/>
-
+    <div className='lg:mx-52'>
     <RegistryPage/>
-    <UploadPage/>
+        <UploadPage/>
+    </div>
+    
     <Footer/>
 
     </div>

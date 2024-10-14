@@ -45,7 +45,7 @@ const UploadPage = () => {
 
   return (
     <div>
-      <div className="flex flex-col items-center justify-center h-2/4  bg-gray-100 m-6 p-4 border-2 border-rose-light-tint  rounded-lg">
+      <div className="flex flex-col items-center justify-center h-2/4 text-rose-dark-tint   bg-gray-100 m-6 p-4 border-2 border-rose-light-tint  rounded-lg">
         <h2 className="font-cardo text-xl  font-bold m-1">Upload Your Wedding Pictures</h2>
 
         <form onSubmit={handleSubmit} className="flex flex-col items-center">
