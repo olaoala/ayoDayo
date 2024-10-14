@@ -2,11 +2,16 @@ import React from 'react';
 
 const EventsPage = () => {
   return (
-    <div className="p-6 bg-gray-100">
+    <div className="p-6 bg-gray-100 text-rose-dark-tint">
+      <p className='text-center font-cardo text-xl  font-bold underline underline-offset-1 m-5'>RSVP</p>
+
       <div className="flex flex-col md:flex-row gap-6">
-        
+
+
         {/* Church Wedding Section */}
-        <div className="border-2 border-gray-300 rounded-lg p-4 w-full md:w-1/2">
+        <div className="border-2 border-rose-light-tint rounded-lg p-4 w-full md:w-1/2">
+        <h3 className="text-xl font-bold m-2">Church Wedding</h3>
+
           <iframe
             title="Church Wedding Location"
             className="w-full h-56 rounded-xl shadow-lg mb-4"
@@ -14,14 +19,16 @@ const EventsPage = () => {
             allowFullScreen=""
             loading="lazy"
           ></iframe>
-          <div className="mt-4">
-            <h3 className="text-xl font-bold mb-2">Church Wedding</h3>
-            <p className="text-gray-700 mb-1">Venue: New Covenant Church, Ijokodo</p>
-            <p className="text-gray-700 mb-1">Date: 24th October, 2024</p>
-            <p className="text-gray-700 mb-1">Time: 4:00 PM</p>
+          <div className="mt-4 flex justify-between items-start">
+            <div>
+            <p className="text-sm mb-1">Venue: New Covenant <br /> Church, Ijokodo</p>
+            <p className="text-sm mb-1">Date: 24th October, 2024</p>
+            <p className="text-sm mb-1">Time: 4:00 PM</p>
+            </div>
+          
             <a
               href="https://www.google.com/maps/dir/?api=1&destination=7.428639,3.869056"
-              className="inline-block mt-2 px-4 py-2 bg-rose-gold text-white rounded-lg hover:bg-chocolate transition"
+              className="inline-block mt-28 ml-4 px-4 py-2 bg-rose-gold text-white rounded-lg hover:bg-chocolate transition"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -31,7 +38,8 @@ const EventsPage = () => {
         </div>
 
         {/* Reception Section */}
-        <div className="border-2 border-gray-300 rounded-lg p-4 w-full md:w-1/2">
+        <div className="border-2 border-rose-light-tint  rounded-lg p-4 w-full md:w-1/2">
+        <h3 className="text-xl m-2 font-bold">Reception</h3>
           <iframe
             title="Reception Location"
             className="w-full h-56 rounded-xl shadow-lg mb-4"
@@ -39,14 +47,16 @@ const EventsPage = () => {
             allowFullScreen=""
             loading="lazy"
           ></iframe>
-          <div className="mt-4">
-            <h3 className="text-xl font-bold mb-2">Reception</h3>
-            <p className="text-gray-700 mb-1">Venue: Manhattan Hall, Eleyele Road, Ibadan</p>
-            <p className="text-gray-700 mb-1">Date: 26th October, 2024</p>
-            <p className="text-gray-700 mb-1">Time: 12:00 PM</p>
+          <div className="mt-4 flex justify-between items-start">
+            <div className=' font-nunito font-bold'>
+              <p className="text-sm mb-1">Venue: Manhattan Hall,  <br /> Eleyele Road, Ibadan</p>
+              <p className="text-sm mb-1">Date: 26th  October,<br />  2024</p>
+              <p className="text-sm mb-1">Time: 12:00 PM</p>
+            </div>
+
             <a
               href="https://www.google.com/maps/dir/?api=1&destination=7.402074,3.856942"
-              className="inline-block mt-2 px-4 py-2 bg-rose-gold text-white rounded-lg hover:bg-chocolate transition"
+              className="inline-block mt-28 ml-4 px-4 py-2 bg-rose-gold text-white rounded-lg hover:bg-chocolate transition"
               target="_blank"
               rel="noopener noreferrer"
             >

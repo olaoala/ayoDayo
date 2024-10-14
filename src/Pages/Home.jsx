@@ -15,20 +15,22 @@ const HomePage = () => {
     <div>
             <Navbar />
 
+
          <motion.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: 'easeIn' }}
     >
-      <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: `url(${I1})` }}>
+
+      <div className="relative h-screen bg-cover bg-center text-rose-gold" style={{ backgroundImage: `url(${I1})` }}>
+
         <div className="absolute inset-0 bg-black opacity-60"></div>
-        <div className="relative flex flex-col items-center justify-end h-full text-rose-gold">
-          {/* <InfinityAnimation/> */}
+        <div className="relative flex flex-col items-center justify-end bottom-14 h-full text-rose-gold">
           <img className='h-40' src={mainimg} alt="" />
-          <div className='flex font-bold gap-5 text-lg m-10'>
-          <p className='text-center'>Oluwafiayobunmi <br /> Fiponmile</p>
+          <div className='flex font-bold gap-5  p-5 font-pinyon text-center text-2xl lg:text-4xl '>
+          <p className='text-center text-xl lg:text-4xl '>Oluwafiayobunmi <br /> Fiponmile</p>
           <p className='mt-4'>&</p>
-          <p className='text-center'>Omogbolahan <br /> Dayo</p>
+          <p className='text-center '>Omogbolahan <br /> Dayo</p>
           </div>
           
         </div>

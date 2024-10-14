@@ -36,21 +36,27 @@ const OurLoveStory = () => {
   });
 
   return (
-    <div className="w-full mx-auto p-4">
-      <p className='text-center m-2'>Our Story</p>
+    <div className="w-full mx-auto p-5 text-rose-dark-tint ">
+      <p className='text-center font-cardo text-xl  font-bold underline underline-offset-1 m-2'>Our Love Story</p>
+
+      <div className='flex justify-between font-cardo font-bold m-5 '>
+        <p>Ayo's POV</p>
+        <p>Dayo's POV</p>
+
+      </div>
 
       <div
         {...handlers} // Add swipe handlers to the container
         className=""
       >
-        <div className="m-0">
-          <img src={images[currentIndex].url} alt={images[currentIndex].caption} className="rounded-lg" />
+        <div className="flex justify-center items-center m-0">
+          <img src={images[currentIndex].url} alt={images[currentIndex].caption} className="h-72 rounded-2xl lg:w-4/5 lg:h-3/5" />
 
         
         </div>
 
         <div className="mt-2">
-          <div className="text-black text-left">
+          <div className=" font-nunito  text-left">
             {images[currentIndex].caption}
           </div>
 
@@ -58,7 +64,7 @@ const OurLoveStory = () => {
             {images.map((_, index) => (
               <span
                 key={index}
-                className={`mx-2 cursor-pointer h-3 w-3 rounded-full ${currentIndex === index ? 'bg-black' : 'bg-gray-400'}`}
+                className={`mx-2 cursor-pointer h-2 w-2 rounded-full ${currentIndex === index ? 'bg-rose-gold' : 'bg-rose-200'}`}
                 onClick={() => handleDotClick(index)}
               />
             ))}

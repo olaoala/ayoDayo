@@ -19,6 +19,27 @@ code {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'pinyon';
+  src: url('/src/Fonts/Pinyon.ttf') format('woff2'), /* Adjust path as necessary */
+       url('/src/Fonts/Pinyon.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'cardo';
+  src: url('/src/Fonts/Cardo.ttf') format('woff2'), /* Adjust path as necessary */
+       url('/src/Fonts/Cardo.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/src/Fonts/Nunito.ttf') format('woff2'), /* Adjust path as necessary */
+       url('/src/Fonts/Nunito.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 @keyframes fadeInOut {
   0%, 100% { opacity: 0; }
   50% { opacity: 1; }
