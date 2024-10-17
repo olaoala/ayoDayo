@@ -33,13 +33,7 @@ const RegistryPage = () => {
   });
 
   // Function to handle input changes
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+
 
   // Function to initiate payment using Paystack
   const handlePaystackPayment = () => {
@@ -60,11 +54,7 @@ const RegistryPage = () => {
   };
 
   // Function to handle form submit
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Call Paystack payment function after form is submitted
-    handlePaystackPayment();
-  };
+
 
   // Function to open the wishlist modal
   const openModal = () => setShowModal(true);

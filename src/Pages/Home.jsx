@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../Components/Navbar';
 import I1 from '../Assets/IFX_3582.jpg';
 import mainimg from '../Assets/oo204.png';
 import { motion } from 'framer-motion';
