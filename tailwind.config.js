@@ -11,7 +11,8 @@ module.exports = {
         'chocolate': '#7b3f00',
         'chocolate-light': '#7b3f00',
         'rose-dark-tint':'#4e272d',
-        'rose-light-tint':'#ebd7da'
+        'rose-light-tint':'#ebd7da',
+        'green':"#2B252C"
       },
       fontFamily:{
         'dance': ['Dance', 'sans-serif'],
@@ -21,6 +22,25 @@ module.exports = {
 
 
 
+      },
+      backgroundSize: {
+        'auto': 'auto',
+        'cover': 'cover',
+        'contain': 'contain',
+        '50': '90%',
+        '16': '4rem',
+        'size': '100vw 250vh'
+      },
+      backgroundPosition: {
+        'center-4': 'center',
+        'top-5':'top '
+        
+      },
+      boxShadow:{
+        "main":'  inset 0px -44px 141px 41px rgba(0,0,0,0.75);'
+      },
+      height:{
+        
       }
       
     },

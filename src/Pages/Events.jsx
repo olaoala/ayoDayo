@@ -20,7 +20,7 @@ const EventsPage = () => {
             loading="lazy"
           ></iframe>
           <div className="mt-4">
-            <div>
+            <div className='font-nunito font-bold'>
             <p className="text-sm mb-1">Venue: New Covenant <br />Church, Ijokodo</p>
             <p className="text-sm mb-1">Date: 24th October, 2024</p>
             <p className="text-sm mb-1">Time: 4:00 PM</p>

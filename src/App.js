@@ -5,6 +5,7 @@ import EventsPage from './Pages/Events';
 import LoveStoryPage from './Pages/OurStory';
 import RegistryPage from './Pages/Registry';
 import UploadPage from './Pages/Upload';
+import Footer from './Components/footer'
 // Import other pages as needed
 
 const App = () => {
@@ -19,10 +20,18 @@ const App = () => {
         <Route path="/upload" element={<UploadPage />} />
 
 
-        {/* Add other routes */}
-        {/* <Route path="/story" element={<LoveStoryPage />} />
-        <Route path="/registry" element={<RegistryPage />} /> */}
+
+   
       </Routes>
+       <LoveStoryPage/>
+
+    <EventsPage/>
+    <div className='lg:mx-52'>
+    <RegistryPage/>
+        <UploadPage/>
+    </div>
+    
+    <Footer/>
     </Router>
     
   );

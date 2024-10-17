@@ -1,54 +1,47 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
-import I1 from '../Assets/I1.jpg';
-import mainimg from '../Assets/oo204.png'
+import I1 from '../Assets/IFX_3582.jpg';
+import mainimg from '../Assets/oo204.png';
 import { motion } from 'framer-motion';
-import EventsPage from './Events';
-import LoveStoryPage from './OurStory';
-import RegistryPage from './Registry';
-import UploadPage from './Upload';
-import Footer from '../Components/footer';
-
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
     <div>
-            <Navbar />
+      {/* <Navbar /> */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: 'easeIn' }}
+      >
+<div 
+  className="relative h-screen  w-full bg-center-4 bg-cover lg:bg-size shadow-main   text-white"
+  style={{ backgroundImage: `url(${I1})`}}
+>
 
 
-         <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: 'easeIn' }}
-    >
-
-      <div className="relative h-screen bg-cover bg-center text-rose-gold" style={{ backgroundImage: `url(${I1})` }}>
-
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-        <div className="relative flex flex-col items-center justify-end bottom-9 h-full text-rose-gold">
-          <img className='h-40' src={mainimg} alt="" />
-          <div className='flex font-bold gap-5  p-5 font-pinyon text-center text-2xl lg:text-4xl '>
-          <p className='text-center text-xl lg:text-4xl '>Oluwafiayobunmi <br /> Fiponmile</p>
-          <p className='mt-4'>&</p>
-          <p className='text-center '>Omogbolahan <br /> Dayo</p>
+          <div className="absolute flex inset-0 bg-green opacity-30 "></div>
+          <div className='flex justify-between items-center p-3 '> 
+          <p className='relative font-cardo font-bold m-3 text-center text-md'>24 . 10 . 24</p>
+          <img className=' relative h-12 ' src={mainimg} alt="Main Image" />
+          <Link to="/gallery" className="relative font-cardo font-bold   text-center m-3 text-md ">Our Gallery</Link>
           </div>
-          
+
+          <div className="relative flex flex-col items-center top-2/3 ">
+            <div className='flex font-bold gap-3 font-cardo text-center text-md  lg:text-4xl'>
+              <p className='text-center  lg:text-4xl'>
+                 OLUWAFIAYOBUNMI <br /> 
+              </p>
+              <p className=''>&</p>
+              <p className='text-center'>
+                 OMOGBOLAHAN <br />  
+              </p>
+            </div>
+            <p className='font-cardo font-bold   text-center  text-lg '>#YoursInfinitly</p>
+          </div>
         </div>
-      </div>
-    </motion.div>
-
-    <LoveStoryPage/>
-
-    <EventsPage/>
-    <div className='lg:mx-52'>
-    <RegistryPage/>
-        <UploadPage/>
+      </motion.div>
     </div>
-    
-    <Footer/>
-
-    </div>
-   
   );
 };
 
