@@ -22,7 +22,7 @@ const HomePage = () => {
           <div className="absolute flex inset-0 bg-green opacity-30 "></div>
           <div className='flex justify-between items-center p-3 '> 
           <p className='relative font-cardo font-bold m-3 text-center text-md'>24 . 10 . 24</p>
-          <img className=' relative h-12 ' src={mainimg} alt="Main Image" />
+          <img className=' relative h-12 ' src={mainimg} alt="Main" />
           <Link to="/gallery" className="relative font-cardo font-bold   text-center m-3 text-md ">Our Gallery</Link>
           </div>
 
