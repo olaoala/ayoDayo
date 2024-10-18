@@ -75,7 +75,7 @@ const RegistryPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-2/4  text-rose-dark-tint bg-gray-100 m-6 p-4 shadow-lg rounded-lg">
+    <div className="flex flex-col items-center justify-center h-2/4  text-rose-dark-tint bg-gray-100 m-2 p-4 shadow-lg rounded-lg">
       <h2 className="text-center font-cardo text-xl font-bold m-1">Registry</h2>
       <p className="text-center mb-2">We appreciate you for celebrating with us, we feel loved and special. Make us feel extra special.</p>
       
