@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import mainimg from '../Assets/oo204.png';
 import { motion } from 'framer-motion';
 import LoveStoryPage from '../Pages/OurStory';
@@ -9,45 +9,17 @@ import Footer from '../Components/footer';
 import Gallery from '../Pages/Gallery';
 
 const HomePage = () => {
-  const [bgLoaded, setBgLoaded] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const sectionElement = sectionRef.current; // Capture the current ref value
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setBgLoaded(true); // Trigger background image load when visible
-          observer.disconnect(); // Stop observing once loaded
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionElement) {
-      observer.observe(sectionElement);
-    }
-
-    return () => {
-      if (sectionElement) {
-        observer.unobserve(sectionElement); // Use the captured element for cleanup
-      }
-    };
-  }, []); // Empty dependency array means it only runs once
-
   return (
     <div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: 'easeIn' }}
-        ref={sectionRef}
       >
         <div
           className="relative h-screen w-full bg-center-4 bg-cover lg:bg-size shadow-main text-white"
           style={{
-            backgroundImage: bgLoaded ? `url(${require('../Assets/IFX_3582.jpg')})` : 'none',
+            backgroundImage: `url(${require('../Assets/IFX_3582.jpg')})`, // Load background immediately
           }}
         >
           <div className="absolute flex inset-0 bg-green opacity-30 "></div>
@@ -75,7 +47,7 @@ const HomePage = () => {
       <EventsPage />
       <Gallery />
 
-      <div className='lg:mx-52'>
+      <div className='m-0 lg:mx-52'>
         <RegistryPage />
         <UploadPage />
       </div>
