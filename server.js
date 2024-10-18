@@ -21,13 +21,14 @@ app.use(cors({
 const storage = multer.memoryStorage();
 const upload = multer({ storage, limits: { fileSize: 5 * 1024 * 1024 } });
 
-const KEYFILEPATH = path.join(__dirname, 'config/servicekey.json');
+const KEYFILEPATH = process.env.GOOGLE_APPLICATION_CREDENTIALS;
 const SCOPES = ['https://www.googleapis.com/auth/drive.file'];
 
 const auth = new google.auth.GoogleAuth({
-  keyFile: KEYFILEPATH,
+  credentials: JSON.parse(Buffer.from(KEYFILEPATH, 'base64').toString()),
   scopes: SCOPES,
 });
+
 
 const drive = google.drive({ version: 'v3', auth });
 
@@ -47,7 +48,7 @@ app.post('/home', upload.array('photos', 3), async (req, res) => {
         const response = await drive.files.create({
           requestBody: {
             name: originalname,
-            parents: ['1Dpzy9uzmOK1gfb7o2RObruSob1aHgo8F'],
+            parents: [process.env.GOOGLE_DRIVE_FOLDER_ID],
           },
           media: {
             mimeType: mimetype,
