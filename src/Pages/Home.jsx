@@ -2,7 +2,6 @@ import React from 'react';
 import I1 from '../Assets/IFX_3582.jpg';
 import mainimg from '../Assets/oo204.png';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
@@ -22,7 +21,6 @@ const HomePage = () => {
           <div className="absolute flex inset-0 bg-green opacity-30 "></div>
           <div className='flex justify-center items-center p-3 '> 
           <p className='relative font-cardo  m-3 text-center text-md'>24 . 10 . 24</p>
-          {/* <Link to="/gallery" className="relative font-cardo   text-center m-3 text-md ">Our Gallery</Link> */}
           </div>
 
           <div className="relative flex flex-col items-center top-2/3 lg:top-64 ">
