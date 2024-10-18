@@ -45,7 +45,7 @@ const HomePage = () => {
 
       <LoveStoryPage />
       <EventsPage />
-      <Gallery />
+      {/* <Gallery /> */}
 
       <div className='m-0 lg:mx-52'>
         <RegistryPage />
