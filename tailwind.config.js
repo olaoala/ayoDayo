@@ -37,7 +37,9 @@ module.exports = {
         
       },
       boxShadow:{
-        "main":'  inset 0px -44px 141px 41px rgba(0,0,0,0.75);'
+        "main":'  inset 0px -44px 141px 41px rgba(0,0,0,0.75)',
+        'sub':'-8px 12px 81px -14px rgba(0,0,0,0.75)',
+        'sub-2': '0px 25px 63px -16px rgba(0,0,0,0.75)'
       },
       height:{
         

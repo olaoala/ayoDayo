@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion'; // For the animation
 import coupleImage from '../Assets/IFX_3681.jpg'; // Replace with your image path
-import throwback1 from '../Assets/I1.jpg'; // Replace with your throwback image paths
-import throwback2 from '../Assets/I1.jpg';
-import throwback3 from '../Assets/I1.jpg';
+import throwback1 from '../Assets/IMG_4468.PNG'; // Replace with your throwback image paths
+import throwback2 from '../Assets/IMG_4467.PNG';
+import throwback3 from '../Assets/IMG_4469.PNG';
 
 const OurLoveStory = () => {
   const [selectedStory, setSelectedStory] = useState('');
@@ -34,12 +34,12 @@ Dec 2019, she told me how she has always felt about me and we started dating. Ju
     <div className="w-full mx-auto p-5 text-rose-dark-tint">
       {/* Header */}
       <h1 className="text-center font-cardo text-xl lg:text-xl font-bold m-2">
-        How 2 Became 1 till Infinity
+       OUR STORY
       </h1>
 
       {/* Image Container - One Image, Divided Interaction */}
       <motion.div
-        className="relative bg-cover h-72 rounded-xl bg-top-5 w-full lg:w-3/4 mx-auto lg:h-svh"
+        className="relative bg-cover h-72 rounded-xl bg-top-5 w-full lg:w-3/4 mx-auto shadow-sub lg:h-svh"
         style={{ backgroundImage: `url(${coupleImage})`, borderRadius: '.75em' }}
         initial={{ x: '100vw' }} // Start from off-screen right
         animate={{ x: 0 }} // Slide in from the right

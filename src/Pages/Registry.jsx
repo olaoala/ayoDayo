@@ -75,9 +75,9 @@ const RegistryPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-2/4 text-rose-dark-tint bg-gray-100 m-6 p-4 border-2 border-rose-light-tint rounded-lg">
+    <div className="flex flex-col items-center justify-center h-2/4  text-rose-dark-tint bg-gray-100 m-6 p-4 shadow-lg rounded-lg">
       <h2 className="text-center font-cardo text-xl font-bold m-1">Registry</h2>
-      <p className="text-center mb-6">Send funds or clear the couple’s wishlist to make their day extra special!</p>
+      <p className="text-center mb-2">We appreciate you for celebrating with us, we feel loved and special. Make us feel extra special.</p>
       
       <div className="flex space-x-4">
         {/* Send Funds Button */}
@@ -91,7 +91,7 @@ const RegistryPage = () => {
         {/* Payment Modal */}
         {showPaystackModal && (
           <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
-            <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-3xl">
+            <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-xl">
               <h3 className="text-xl font-bold mb-4">Send Your Support</h3>
 
               {/* Form for Payment Details */}
@@ -119,19 +119,24 @@ const RegistryPage = () => {
                     required
                   />
                 </label>
-
+                <div className='flex justify-between'>
                 <button
                   type="submit"
                   className="mt-4 px-4 py-2 bg-rose-dark-tint text-white rounded-lg hover:bg-chocolate"
                 >
                   Pay via Paystack
                 </button>
-              </form>
 
-              {/* Close Modal Button */}
+                      {/* Close Modal Button */}
               <button onClick={() => setShowPaystackModal(false)} className="mt-4 px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400">
                 Close
               </button>
+                  
+                </div>
+            
+              </form>
+
+        
             </div>
           </div>
         )}
@@ -147,12 +152,17 @@ const RegistryPage = () => {
 
       {/* Wishlist Modal */}
       {showWishlistModal && (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-3xl h-96 overflow-y-scroll">
-            <h3 className="text-xl font-bold mb-4">Our Wishlist</h3>
+        <div className="fixed inset-0 bg-gray-800  bg-opacity-75 flex items-center justify-center">
+          <div className="bg-white m-2 p-6 rounded-lg shadow-lg w-full max-w-3xl h-96 overflow-y-scroll">
+            <div className='flex justify-between'>
+            <h3 className="  text-xl font-bold  bg-white p-2  ">Our Wishlist</h3>
+            <button className="  text-black right-2 text-xl"  onClick={() => setShowWishlistModal(false)}>✖</button>
+
+            </div>
+           
 
             {/* Grid of Wishlist Items */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pt-8 gap-4">
               {wishlistItems.map((item) => (
                 <div
                   key={item.id}
@@ -163,6 +173,9 @@ const RegistryPage = () => {
                   <h4 className="font-semibold">{item.name}</h4>
                   <p>{item.price}</p>
                 </div>
+                
+
+                
               ))}
             </div>
 
@@ -176,16 +189,16 @@ const RegistryPage = () => {
 
       {/* Confirmation Popup */}
       {showConfirmation && (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
+        <div className="fixed m-2 text-center inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-bold mb-4">Confirm Purchase</h3>
             <p>Do you want to purchase the {selectedItem.name}?</p>
-            <div className="flex space-x-4 mt-4">
+            <div className="flex justify-between">
               <button onClick={confirmSelection} className="px-4 py-2 bg-rose-dark-tint text-white rounded-lg hover:bg-chocolate">
-                Yes
+                Yes, perfect gift
               </button>
               <button onClick={() => setShowConfirmation(false)} className="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400">
-                No
+              Pick something else
               </button>
             </div>
           </div>
