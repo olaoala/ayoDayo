@@ -30,7 +30,7 @@ const LandingPage = () => {
 
   return (
     <div className="h-screen bg-white flex justify-center items-center">
-      <p className="text-xl font-bold text-rose-gold animate-pulse">
+      <p className="text-lg font-bold text-rose-gold animate-pulse">
         {greetings[greetingIndex]}
       </p>
     </div>

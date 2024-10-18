@@ -83,7 +83,7 @@ const RegistryPage = () => {
         {/* Send Funds Button */}
         <button
           onClick={() => setShowPaystackModal(true)} // Open Paystack modal
-          className="inline-block px-6 py-3 border bg-rose-dark-tint text-white rounded-lg hover:bg-chocolate transition"
+          className="inline-block px-6 py-3 border bg-rose-gold text-white rounded-lg "
         >
           Support Us via Paystack
         </button>
@@ -122,7 +122,7 @@ const RegistryPage = () => {
                 <div className='flex justify-between'>
                 <button
                   type="submit"
-                  className="mt-4 px-4 py-2 bg-rose-dark-tint text-white rounded-lg hover:bg-chocolate"
+                  className="mt-4 px-4 py-2 bg-rose-gold shadow-lg text-white rounded-lg "
                 >
                   Pay via Paystack
                 </button>
@@ -144,7 +144,7 @@ const RegistryPage = () => {
         {/* Clear Wishlist Button */}
         <button
           onClick={() => setShowWishlistModal(true)} // Open wishlist modal
-          className="inline-block px-6 py-3 border border-rose-dark-tint text-rose-dark-tint rounded-lg hover:bg-gray-400 transition"
+          className="inline-block px-6 py-3 border border-rose-gold text-rose-dark-tint rounded-lg "
         >
           Clear Our Wishlist
         </button>

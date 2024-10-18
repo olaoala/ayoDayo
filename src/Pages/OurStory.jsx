@@ -83,7 +83,7 @@ Dec 2019, she told me how she has always felt about me and we started dating. Ju
             <h2 className="text-xl font-bold mb-4">Fiponmile's POV</h2>
             <p>{wifeStory}</p>
             <button
-              className="mt-4 bg-rose-gold text-white py-2 px-4 rounded-lg hover:bg-rose-dark-tint"
+              className="mt-4 bg-rose-gold text-white py-2 px-4 rounded-lg "
               onClick={() => handleSelect('husband')}
             >
               My Husband's Version
@@ -101,7 +101,7 @@ Dec 2019, she told me how she has always felt about me and we started dating. Ju
             <h2 className="text-xl font-bold mb-4">Dayo's POV</h2>
             <p>{husbandStory}</p>
             <button
-              className="mt-4 bg-rose-gold text-white py-2 px-4 rounded-lg hover:bg-rose-dark-tint"
+              className="mt-4 bg-rose-gold text-white py-2 px-4 rounded-lg "
               onClick={handleShowThrowback}
             >
               See Our Throwback

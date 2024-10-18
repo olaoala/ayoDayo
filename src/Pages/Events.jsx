@@ -8,7 +8,7 @@ const EventsPage = () => {
       <div className="flex flex-col md:flex-row gap-6">
 
         {/* Church Wedding Section */}
-        <div className="  rounded-lg p-4  md:w-1/2 shadow-lg transition-transform transform hover:scale-105">
+        <div className="  rounded-lg p-4  md:w-1/2 shadow-lg transition-transform transform">
           <h3 className="text-xl font-bold m-2">Church Wedding</h3>
 
           <iframe
@@ -27,7 +27,7 @@ const EventsPage = () => {
           
             <a
               href="https://www.google.com/maps/dir/?api=1&destination=7.428639,3.869056"
-              className="inline-block mt-3 px-4 py-2 border border-rose-dark-tint text-rose-dark-tint rounded-lg hover:bg-chocolate transition"
+              className="inline-block mt-3 px-4 py-2 border border-rose-gold text-rose-dark-tint shadow-lg rounded-lg "
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -37,7 +37,7 @@ const EventsPage = () => {
         </div>
 
         {/* Reception Section */}
-        <div className=" rounded-lg p-4 w-full md:w-1/2 shadow-lg transition-transform transform hover:scale-105">
+        <div className=" rounded-lg p-4 w-full md:w-1/2 shadow-lg transition-transform transform">
           <h3 className="text-xl m-2 font-bold">Reception</h3>
           <iframe
             title="Reception Location"
@@ -55,7 +55,7 @@ const EventsPage = () => {
 
             <a
               href="https://www.google.com/maps/dir/?api=1&destination=7.402074,3.856942"
-              className="inline-block mt-3 px-4 py-2 border border-rose-dark-tint text-rose-dark-tint rounded-lg hover:bg-chocolate transition"
+              className="inline-block mt-3 px-4 py-2 border border-rose-gold shadow-lg text-rose-dark-tint rounded-lg"
               target="_blank"
               rel="noopener noreferrer"
             >
