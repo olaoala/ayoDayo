@@ -6,7 +6,6 @@ import EventsPage from '../Pages/Events';
 import RegistryPage from '../Pages/Registry';
 import UploadPage from '../Pages/Upload';
 import Footer from '../Components/footer';
-import Gallery from '../Pages/Gallery';
 
 const HomePage = () => {
   return (
