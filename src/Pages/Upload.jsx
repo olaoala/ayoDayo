@@ -28,7 +28,7 @@ const UploadPage = () => {
     });
 
     try {
-      const response = await axios.post('https://ponmile-ati-dayo.onrender.com/home', formData, {
+      const response = await axios.post('https://ponmile-ati-dayo.onrender.com/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
