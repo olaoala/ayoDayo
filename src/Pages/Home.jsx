@@ -48,7 +48,7 @@ const HomePage = () => {
         <div
           className="relative h-screen w-full bg-center-4 bg-cover lg:bg-size shadow-main text-white"
           style={{
-            backgroundImage: bgLoaded ? `url(${I1})` : 'none',
+            backgroundImage: bgLoaded ? `url(${require('../Assets/IFX_3582.jpg')})` : 'none',
           }}
         >
           <div className="absolute flex inset-0 bg-green opacity-30 "></div>

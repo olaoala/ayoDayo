@@ -1,24 +1,24 @@
 import React, { useEffect, useRef } from 'react';
-import I1 from '../Assets/IFX_3452.jpg'
-import I2 from '../Assets/IFX_3513.jpg'
-import I3 from '../Assets/IFX_3531.jpg'
-import I4 from '../Assets/IFX_3582.jpg'
-import I5 from '../Assets/IFX_3591.jpg'
-import I6 from '../Assets/IFX_3597.jpg'
-import I7 from '../Assets/IFX_3599.jpg'
-import I8 from '../Assets/IFX_3661.jpg'
-import I9 from '../Assets/IFX_3681.jpg'
-import I11 from '../Assets/IFX_3735.jpg'
-import I14 from '../Assets/IFX_3743.jpg'
-import I15 from '../Assets/IFX_3753.jpg'
-import I16 from '../Assets/IFX_3765.jpg'
-import I17 from '../Assets/IFX_3773.jpg'
-// import I1 from '../Assets/IFX_3753.jpg'
+
 
 // Sample image list (replace with your image URLs)
 const images = [
-    I8,I9, I3,I4,I7,I11,I14,I15,I16,I17,I1, I2,I5,I6
-];
+    require('../Assets/IFX_3452.jpg'),
+    require('../Assets/IFX_3513.jpg'),
+    require('../Assets/IFX_3531.jpg'),
+    require('../Assets/IFX_3582.jpg'),
+    require('../Assets/IFX_3591.jpg'),
+    require('../Assets/IFX_3597.jpg'),
+    require('../Assets/IFX_3599.jpg'),
+    require('../Assets/IFX_3661.jpg'),
+    require('../Assets/IFX_3681.jpg'),
+    require('../Assets/IFX_3735.jpg'),
+    require('../Assets/IFX_3743.jpg'),
+    require('../Assets/IFX_3753.jpg'),
+    require('../Assets/IFX_3765.jpg'),
+    require('../Assets/IFX_3773.jpg')
+  ];
+  
 
 const Gallery = () => {
   const galleryRef = useRef(null);

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion'; // For the animation
-import coupleImage from '../Assets/IFX_3681.jpg'; // Replace with your image path
 import throwback1 from '../Assets/IMG_4468.PNG'; // Replace with your throwback image paths
 import throwback2 from '../Assets/IMG_4467.PNG';
 import throwback3 from '../Assets/IMG_4469.PNG';
@@ -40,7 +39,7 @@ Dec 2019, she told me how she has always felt about me and we started dating. Ju
       {/* Image Container - One Image, Divided Interaction */}
       <motion.div
         className="relative bg-cover h-72 rounded-xl bg-top-5 w-full lg:w-3/4 mx-auto shadow-sub lg:h-svh"
-        style={{ backgroundImage: `url(${coupleImage})`, borderRadius: '.75em' }}
+        style={{ backgroundImage: `url(${require('../Assets/IFX_3681.jpg')})`, borderRadius: '.75em' }}
         
       >
         {/* Dividing the Image into Left and Right Sections */}
