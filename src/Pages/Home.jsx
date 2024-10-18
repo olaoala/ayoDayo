@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import I1 from '../Assets/IFX_3582.jpg'; // Optimized WebP image
 import mainimg from '../Assets/oo204.png';
 import { motion } from 'framer-motion';
 import LoveStoryPage from '../Pages/OurStory';
