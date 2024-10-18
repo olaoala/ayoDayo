@@ -6,6 +6,7 @@ import EventsPage from '../Pages/Events';
 import RegistryPage from '../Pages/Registry';
 import UploadPage from '../Pages/Upload';
 import Footer from '../Components/footer';
+import Gallery from '../Pages/Gallery';
 
 const HomePage = () => {
   return (
@@ -16,7 +17,7 @@ const HomePage = () => {
         transition={{ duration: 1, ease: 'easeIn' }}
       >
         <div
-          className="relative h-screen w-screen bg-center-4 bg-cover lg:bg-size shadow-main text-white"
+          className="relative h-screen w-full bg-center-4 bg-cover lg:bg-size shadow-main text-white"
           style={{
             backgroundImage: `url(${require('../Assets/IFX_3582.jpg')})`, // Load background immediately
           }}
@@ -44,7 +45,7 @@ const HomePage = () => {
 
       <LoveStoryPage />
       <EventsPage />
-      {/* <Gallery /> */}
+      <Gallery />
 
       <div className='m-0 lg:mx-52'>
         <RegistryPage />
