@@ -7,7 +7,7 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const allowedOrigins = ['http://localhost:3000','https://ponmile-ati-dayo.onrender.com', 'https://ayodayo.netlify.app', 'https://ayodayo.netlify.app/home'];
+const allowedOrigins = ['http://localhost:3000','https://ponmile-ati-dayo.onrender.com','https://ponmile-ati-dayo.onrender.com/home', 'https://ayodayo.netlify.app', 'https://ayodayo.netlify.app/home'];
 
 app.use(cors({
   origin: function (origin, callback) {
