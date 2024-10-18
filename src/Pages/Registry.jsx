@@ -44,7 +44,7 @@ const RegistryPage = () => {
     paystack.newTransaction({
       key: 'pk_live_bfcec00387948c33e9b9a146735988ba0d67315f', // Replace with your Paystack public key
       amount: formData.amount * 100, // Convert to kobo
-      email: 'guest@example.com', // Use dynamic email if needed
+      email: formData.email, // Use dynamic email if needed
       currency: 'NGN',
       onSuccess: (transaction) => {
         alert(`Payment Complete! Reference: ${transaction.reference}`);
@@ -85,7 +85,7 @@ const RegistryPage = () => {
           onClick={() => setShowPaystackModal(true)} // Open Paystack modal
           className="inline-block px-6 py-3 border bg-rose-gold text-white rounded-lg "
         >
-          Support Us via Paystack
+          Send Funds
         </button>
 
         {/* Payment Modal */}
@@ -102,6 +102,17 @@ const RegistryPage = () => {
                     type="text"
                     name="fullName"
                     value={formData.fullName}
+                    onChange={handleInputChange}
+                    className="block w-full border p-2 rounded"
+                    required
+                  />
+                </label>
+                <label className="block mb-2">
+                  Email:
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
                     onChange={handleInputChange}
                     className="block w-full border p-2 rounded"
                     required

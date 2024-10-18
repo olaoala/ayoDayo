@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import I1 from '../Assets/IFX_3582.jpg'; // Use a compressed WebP format for optimization
-import mainimg from '../Assets/oo204.png'; // Consider optimizing this as well
+import I1 from '../Assets/IFX_3582.jpg'; // Optimized WebP image
+import mainimg from '../Assets/oo204.png';
 import { motion } from 'framer-motion';
 import LoveStoryPage from '../Pages/OurStory';
 import EventsPage from '../Pages/Events';
@@ -14,32 +14,31 @@ const HomePage = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const sectionElement = sectionRef.current; // Capture the current ref value
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setBgLoaded(true); // Trigger image loading when section is visible
-          observer.disconnect(); // Stop observing once the background is loaded
+          setBgLoaded(true); // Trigger background image load when visible
+          observer.disconnect(); // Stop observing once loaded
         }
       },
-      {
-        threshold: 0.1, // Trigger when 10% of the section is visible
-      }
+      { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (sectionElement) {
+      observer.observe(sectionElement);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (sectionElement) {
+        observer.unobserve(sectionElement); // Use the captured element for cleanup
       }
     };
-  }, []);
+  }, []); // Empty dependency array means it only runs once
 
   return (
     <div>
-      {/* <link rel="preload" href={I1} as="image" /> */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -49,7 +48,7 @@ const HomePage = () => {
         <div
           className="relative h-screen w-full bg-center-4 bg-cover lg:bg-size shadow-main text-white"
           style={{
-            backgroundImage: bgLoaded ? `url(${I1})` : 'none', // Load background only when it comes into view
+            backgroundImage: bgLoaded ? `url(${I1})` : 'none',
           }}
         >
           <div className="absolute flex inset-0 bg-green opacity-30 "></div>

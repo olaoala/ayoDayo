@@ -41,9 +41,7 @@ Dec 2019, she told me how she has always felt about me and we started dating. Ju
       <motion.div
         className="relative bg-cover h-72 rounded-xl bg-top-5 w-full lg:w-3/4 mx-auto shadow-sub lg:h-svh"
         style={{ backgroundImage: `url(${coupleImage})`, borderRadius: '.75em' }}
-        initial={{ x: '100vw' }} // Start from off-screen right
-        animate={{ x: 0 }} // Slide in from the right
-        transition={{ type: 'spring', stiffness: 50, delay: 0.2 }}
+        
       >
         {/* Dividing the Image into Left and Right Sections */}
         <div className="w-full h-full flex">
