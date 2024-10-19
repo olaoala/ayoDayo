@@ -1,5 +1,5 @@
 {
-  "short_name": "React App",
+  "short_name": "Ponmile ati Dayo",
   "name": "Create React App Sample",
   "icons": [
     {
@@ -9,6 +9,10 @@
     },
     {
       "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },  {
+      "src": "oo204.png",
       "type": "image/png",
       "sizes": "192x192"
     },
